@@ -116,12 +116,25 @@
         
         this.getDetalleOrdenCompra= function(id){
           
-            return $http.get('http://localhost:8080/intento1/rest/detallesOrdenesCompra/'+id);
+            return $http({
+                
+              method : 'GET',
+              url: 'rest/detallesOrdenesCompra/'+id
+            });
+            
+            
+          
         };
         
         this.getMedicamentoProveedor = function(id){
             
-            return $http.get('http://localhost:8080/intento1/rest/medicamentospp/'+id);
+            return $http({
+                
+              method : 'GET',
+              url: 'rest/medicamentospp/'+id
+            });
+            
+           
             
         };
         
