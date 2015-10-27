@@ -16,7 +16,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="EPSAfilidas"
-    ,catalog="cosw2"
 )
 public class Epsafilida  implements java.io.Serializable {
 

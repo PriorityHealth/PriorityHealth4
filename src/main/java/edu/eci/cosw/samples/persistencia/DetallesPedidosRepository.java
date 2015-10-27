@@ -5,19 +5,21 @@
  */
 package edu.eci.cosw.samples.persistencia;
 
-import edu.eci.cosw.samples.model.Mensajero;
-import edu.eci.cosw.samples.model.Paciente;
-import java.io.Serializable;
-import java.util.List;
+
+import edu.eci.cosw.samples.model.DetallePedido;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
 /**
  *
- * @author Viviana
+ * @author Usuario
  */
-public interface MensajeroRepository extends CrudRepository<Mensajero, Integer>{
-    @Query("from Mensajero m where m.idEmpleados= :id")
-    public Paciente search(@Param("id") int searchTerm);
+public interface DetallesPedidosRepository extends CrudRepository<DetallePedido, Integer>{
+   
+    @Query("from DetallePedido p where p.idDetalle= :ln")
+    public DetallePedido search(@Param("ln") int searchTerm);
+
 }
+
+

@@ -19,7 +19,6 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name="Inventario"
-    ,catalog="cosw2"
 )
 public class Inventario  implements java.io.Serializable {
 

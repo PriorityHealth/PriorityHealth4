@@ -23,7 +23,6 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name="Pedidos"
-    ,catalog="cosw2"
 )
 public class Pedido  implements java.io.Serializable {
 

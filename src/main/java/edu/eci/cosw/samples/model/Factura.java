@@ -22,7 +22,6 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name="Facturas"
-    ,catalog="cosw2"
 )
 public class Factura  implements java.io.Serializable {
 

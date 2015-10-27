@@ -28,8 +28,7 @@
 
     <!-- Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href='http://fonts.googleapis.com/css?family=Playball' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:300' rel='stylesheet' type='text/css'>
+	
     <!-- IE8 support for HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -497,8 +496,6 @@
 			</div>
 	</section>
     
-    
-    
 	<section class="gallery" id="gallery">
         <div class="container">
 			<div class="row">
@@ -594,472 +591,100 @@
 		</div>
     </section>
 
-    
-    
-    
-    
     <section class="contact" id="contact">
-          <div class="container">
+        <div class="container">
+			<div class="text-center animateup">
+				<div class="inline-icons-text section-heading">
+					<div class="inline-icon">
+						<hr/><hr/><hr/><hr/><hr/>
+					</div>
+					<span class="inline-icon heading-width">
+						<span class="heading-text">Contact Us</span>
+					</span>
+					<div class="inline-icon">
+						<hr/><hr/><hr/><hr/><hr/>
+					</div>
+				</div>
+			</div>
+			
+			<div class="gap-50"></div>
+			<h3 class="text-center">We Are Ready To Work With You</h3>
             <div class="row">
-                <div class="col-lg-12 text-center animateup">
-					<div class="inline-icons-text section-heading">
-						<div class="inline-icon">
-							<hr/><hr/><hr/><hr/><hr/>
+                <div class="col-md-7 animateright">
+                    <form role="form">
+                        <div class="form-group input-group col-xs-12 floating-label-form-group">
+							<span class="input-group-addon"> <i class="fa fa-user fa-lg"></i> </span>
+
+							<label for="name">Name</label>
+							
+							<input class="form-control" type="text" name="name" id="name" placeholder="Name">
 						</div>
-						<span class="inline-icon heading-width">
-							<span class="heading-text">Recepcion Orden</span>
-						</span>
+                        <div class="form-group input-group col-xs-12 floating-label-form-group">
+							<span class="input-group-addon"> <i class="fa fa-envelope-o fa-lg"></i> </span>
+							<label for="email">Email Address</label>
+							<input class="form-control" type="email" name="email" id="email" placeholder="Email Address">
+						</div>
+                        <div class="form-group input-group col-xs-12 floating-label-form-group message-addon">
+							<span class="input-group-addon"> <i class="fa fa-pencil-square-o fa-lg"></i> </span>
+							<label for="message">Message</label>
+							<textarea placeholder="Message" class="form-control" name="message" id="message" rows="5"></textarea>
+						</div>
+                       
+                        <br>
+                        <div class="form-group col-xs-12">
+							<button type="submit" class="btn btn-default btn-lg">Send</button>
+						</div>
+                       
+                    </form>
+                </div>
+				<div class="col-md-5 animateleft contact-sidebar">
+					<div class="inline-icons-text">
 						<div class="inline-icon">
-							<hr/><hr/><hr/><hr/><hr/>
+							<div class="btn-social btn-outline"><i class="fa fa-fw fa-map-marker"></i>
+							</div>
+						</div>
+						<div class="inline-icon">
+							<div class="marker">728 F Block Gulshan Ravi Lahore, Pakistan</div>
+							
+						</div>
+					</div>
+					<div class="inline-icons-text">
+						<div class="inline-icon">
+							<div class="btn-social btn-outline"><i class="fa fa-fw fa-envelope"></i>
+							</div>
+						</div>
+						<div class="inline-icon">
+							<div class="marker">Themifycloud@gmail.com</div>
+							
+						</div>
+					</div>
+					<div class="inline-icons-text">
+						<div class="inline-icon">
+							<div class="btn-social btn-outline"><i class="fa fa-fw fa-phone"></i>
+							</div>							
+						</div>
+						<div class="inline-icon">
+							<div class="marker">+923234392424</div>
+							
 						</div>
 					</div>
                 </div>
-            </div>	
-            <div class="gap-30"></div>
-            
-                    <div class="form-group input-group">
-                        <span class="input-group-addon"> <i class="fa fa-user fa-lg"></i> </span>
-                        <label for="name">Numero de Seguimiento </label>
-			<input style="background-color:darkgray" class="form-control" type="text" ng-model="idordenCompra" id="idordenCompra" placeholder="Numero de Seguimiento ">
-                    </div>
-                     <br>
-                    <div class="form-group col-xs-12">
-                       <!--button type="submit" class="btn btn-primary" ng-click="getAutorizacion()">Consultar Todas</button-->
-                       <button type="submit" class="btn btn-primary" ng-click="traerDetalleInventario()">Consultar</button>
-                    </div>
-            
-            <table style="background-color:darkgray" class="table table-condensed table-bordered table-striped">
-                <thead>
-                    <tr>
-                       <th>Codigo detalle</th>
-                       <th>Cantidad</th>
-                       
-                    </tr>                
-                </thead>
-                <tbody>
-                    <tr >
-                        <td  style="background-color:darkgray">
-                            {{pedido.idDetallesOrdenesCompra}}
-                        </td>
-                        
-                        <td style="background-color:teal">
-                            {{pedido.cantidad}}
-                        </td >
-                        
-                    </tr>                 
-                </tbody>
-            </table>
-                     
-                     
-                     
-            
-                     
-                     
-                     
-                     
-                     
-                     <div class="row" >
-                            
-                            
-                        
-                            
-                     
-                    
-                    <p>Consultar Medicamento Proveedor</p>
-                        
-                        
-                    <span class="input-group-addon"> <i class="fa fa-user fa-lg"></i> </span>
-                    <label for="name">ID Med Proveedor </label>
-		    <input style="background-color:darkgray" class="form-control" type="text" ng-model="idmedicpp" id="idmedicpp" placeholder="ID MEDIC PROV ">
-                    </div>
-                     <br>
-                    <div class="form-group col-xs-12">
-                       <!--button type="submit" class="btn btn-primary" ng-click="getAutorizacion()">Consultar Todas</button-->
-                       <button type="submit" class="btn btn-primary" ng-click="getMedProd()">Consultar</button>
-                    </div>
-                            
-                     
-                     
-                     
-                     
-                    
-                    
-                     <table style="background-color:darkgray" class="table table-condensed table-bordered table-striped">
-               <thead>
-                            <tr style="background-color:darkgray">
-                                 <th>IdMedicamentoProveedor</th>
-                                 <th>precio</th>
-                            </tr>
-                        </thead>
-                <tbody>
-                    <tr >
-                                <td style="background-color:darkgray">{{ medi.idMedicamentosProvedor}}</td>
-                                <td style="background-color:teal">{{ medi.precio}}</td>
-                            </tr>
-                        </tbody>
-            </table>
-				
-			
-                    
-                                     
-                        
-                        
-                        
-                        
-                        
-                        
-                        <p>Seleccione el numero de unidades a Ingresar</p>
-                                        <p>
-                                            <select style="background-color:darkgray" ng-model="tomado" ng-options="val for val in getNumeroUnidadesAComprar()">
-                                                <option value="">Unidades A Ingresarr</option>
-                                            </select>
-                        </p>
-                    <p>Numero de unidades seleccionadas: {{tomado}}</p>
-                    <button center-align class="btn btn-primary filter active" value="OK" ng-click="medicamentomas()">Generar Ingreso inventario</button>
-                       </div>  
-
-                     
-                     
-                     
-                     
-                     
-                     
-        </div>
-        
-        
-        
-        
-    </section>
-    <section class="grey-area talkabout ">
-		<h2 class="main_heading animatezoomin"></h2>
-		
-			<div class="gap-80"></div>
-			<div class="page-scroll">
-				<a href="#contact" class="btn btn-default btn-lg animatezoomin"> </a>
-			</div>	
-	</section>
-    
-    
-    
-    
-    
-    
-	<div id="googleMap" style="width:100%;height:350px;"></div>
-    
-	<footer class="text-center">
-        <div class="footer-below">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        Copyright &copy; 2014 - ThemifyCloud
-                    </div>
-                </div>
             </div>
         </div>
-    </footer>
-
-    <div class="scroll-top page-scroll visible-xs visble-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
+	</section>
+	
 </div>
     <!-- gallery Modals -->
-    <div class="gallery-modal modal fade" id="galleryModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Treatment</h2>
-                            <hr class="star-primary">
-                            <img src="img/gallery/photo_01.jpg" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client: <strong><a href="http://themifycloud.com">Clinix</a></strong>
-                                </li>
-                                <li>Date: <strong><a href="http://themifycloud.com">May 2014</a></strong>
-                                </li>
-                                <li>Service: <strong><a href="http://themifycloud.com">Web laboratory</a></strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="gallery-modal modal fade" id="galleryModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Satisfied Patients</h2>
-                            <hr class="star-primary">
-                            <img src="img/gallery/photo_02.jpg" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client: <strong><a href="http://themifycloud.com">Clinix</a></strong>
-                                </li>
-                                <li>Date: <strong><a href="http://themifycloud.com">May 2014</a></strong>
-                                </li>
-                                <li>Service: <strong><a href="http://themifycloud.com">Web laboratory</a></strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="gallery-modal modal fade" id="galleryModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Senior Staff</h2>
-                            <hr class="star-primary">
-                            <img src="img/gallery/photo_03.jpg" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client: <strong><a href="http://themifycloud.com">Clinix</a></strong>
-                                </li>
-                                <li>Date: <strong><a href="http://themifycloud.com">May 2014</a></strong>
-                                </li>
-                                <li>Service: <strong><a href="http://themifycloud.com">Web laboratory</a></strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="gallery-modal modal fade" id="galleryModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Clinical Expert</h2>
-                            <hr class="star-primary">
-                            <img src="img/gallery/photo_04.jpg" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client: <strong><a href="http://themifycloud.com">Clinix</a></strong>
-                                </li>
-                                <li>Date: <strong><a href="http://themifycloud.com">May 2014</a></strong>
-                                </li>
-                                <li>Service: <strong><a href="http://themifycloud.com">Web laboratory</a></strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="gallery-modal modal fade" id="galleryModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Child Care</h2>
-                            <hr class="star-primary">
-                            <img src="img/gallery/photo_05.jpg" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client: <strong><a href="http://themifycloud.com">Clinix</a></strong>
-                                </li>
-                                <li>Date: <strong><a href="http://themifycloud.com">May 2014</a></strong>
-                                </li>
-                                <li>Service: <strong><a href="http://themifycloud.com">Web laboratory</a></strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="gallery-modal modal fade" id="galleryModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Satisfied Patients</h2>
-                            <hr class="star-primary">
-                            <img src="img/gallery/photo_06.jpg" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client: <strong><a href="http://themifycloud.com">Clinix</a></strong>
-                                </li>
-                                <li>Date: <strong><a href="http://themifycloud.com">May 2014</a></strong>
-                                </li>
-                                <li>Service: <strong><a href="http://themifycloud.com">Web laboratory</a></strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-	<div class="gallery-modal modal fade" id="galleryModal7" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Pressure Guidelines</h2>
-                            <hr class="star-primary">
-                            <img src="img/gallery/photo_07.jpg" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client: <strong><a href="http://themifycloud.com">Clinix</a></strong>
-                                </li>
-                                <li>Date: <strong><a href="http://themifycloud.com">May 2014</a></strong>
-                                </li>
-                                <li>Service: <strong><a href="http://themifycloud.com">Web laboratory</a></strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-	<div class="gallery-modal modal fade" id="galleryModal8" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Dental Treatment</h2>
-                            <hr class="star-primary">
-                            <img src="img/gallery/photo_08.jpg" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client: <strong><a href="http://themifycloud.com">Clinix</a></strong>
-                                </li>
-                                <li>Date: <strong><a href="http://themifycloud.com">May 2014</a></strong>
-                                </li>
-                                <li>Service: <strong><a href="http://themifycloud.com">Web laboratory</a></strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-	<div class="gallery-modal modal fade" id="galleryModal9" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Springtime Allergies </h2>
-                            <hr class="star-primary">
-                            <img src="img/gallery/photo_09.jpg" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client: <strong><a href="http://themifycloud.com">Clinix</a></strong>
-                                </li>
-                                <li>Date: <strong><a href="http://themifycloud.com">May 2014</a></strong>
-                                </li>
-                                <li>Service: <strong><a href="http://themifycloud.com">Web laboratory</a></strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.min.js"></script>
-	<script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
     <script src="js/jquery.easing.js"></script>
-	<script src="js/classie.js"></script>
-	<script src="js/jquery.appear.js"></script>
-	<script src="js/jquery.flexslider-min.js"></script>
-	<script src="js/jquery.knob.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/jquery.appear.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/jquery.knob.js"></script>
     <script src="js/countUp.min.js"></script>
-    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyALl-WUnKHFD26s6bPPpOo3MMEWBugZjy0&amp;sensor=false">
-	</script>
-	
-	<script src="js/site.js"></script>
-	
-
-
+    <script src="js/site.js"></script>
 </body>
 
 </html>

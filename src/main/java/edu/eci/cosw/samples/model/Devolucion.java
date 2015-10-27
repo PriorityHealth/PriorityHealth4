@@ -15,7 +15,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="Devoluciones"
-    ,catalog="cosw2"
 )
 public class Devolucion  implements java.io.Serializable {
 

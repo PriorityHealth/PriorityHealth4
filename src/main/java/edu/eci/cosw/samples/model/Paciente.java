@@ -18,7 +18,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="Pacientes"
-    ,catalog="cosw2"
 )
 public class Paciente  implements java.io.Serializable {
 

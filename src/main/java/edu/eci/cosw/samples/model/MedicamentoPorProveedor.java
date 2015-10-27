@@ -18,7 +18,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="MedicamentosPorProveedor"
-    ,catalog="cosw2"
 )
 public class MedicamentoPorProveedor  implements java.io.Serializable {
 

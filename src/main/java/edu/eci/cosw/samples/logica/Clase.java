@@ -10,6 +10,7 @@ import edu.eci.cosw.samples.model.Cotizacion;
 import edu.eci.cosw.samples.model.Despacho;
 import edu.eci.cosw.samples.model.DetalleInventario;
 import edu.eci.cosw.samples.model.DetalleOrdenCompra;
+import edu.eci.cosw.samples.model.DetallePedido;
 import edu.eci.cosw.samples.model.Epsafilida;
 import edu.eci.cosw.samples.model.Inventario;
 import edu.eci.cosw.samples.model.Medicamento;
@@ -22,8 +23,10 @@ import edu.eci.cosw.samples.model.Proveedor;
 import edu.eci.cosw.samples.persistencia.AutorizacionRepository;
 import edu.eci.cosw.samples.persistencia.CotizacionesRepository;
 import edu.eci.cosw.samples.persistencia.DespachoRepository;
+import edu.eci.cosw.samples.persistencia.DetalleOrdenConprRepository;
 import edu.eci.cosw.samples.persistencia.DetallesInventarioRepository;
 import edu.eci.cosw.samples.persistencia.DetallesOrdenesCompraRepository;
+import edu.eci.cosw.samples.persistencia.DetallesPedidosRepository;
 import edu.eci.cosw.samples.persistencia.EpsafilidaRepository;
 import edu.eci.cosw.samples.persistencia.InventarioRepository;
 import edu.eci.cosw.samples.persistencia.MedicamentoPPRepository;
@@ -52,9 +55,14 @@ public class Clase {
     PedidosRepository pr;
     
     @Autowired
+    DetallesPedidosRepository dpr;
+    
+    @Autowired
     MedicamentoPPRepository mppr;
     
-      
+    @Autowired
+    DetalleOrdenConprRepository doc;
+    
     @Autowired
     MedicamentoRepository mr;
     
@@ -90,16 +98,44 @@ public class Clase {
     
     @Autowired
     DespachoRepository des;
+
+    public void addNewEps(Epsafilida eps){
+        epsr.save(eps);
+    }
+    
+    public void addNewAutorizacion(Autorizacion a){
+        ar.save(a);
+    }
+    
+    public void addNewMedicamento(Medicamento md){
+        mr.save(md);
+    }
+    
+    public long numeroPedidos() {
+        return pr.count();
+    }
+
+    
+    public void addNewMedicamentosPP(MedicamentoPorProveedor mp) {
+        mppr.save(mp);
+    }
+    public void addNewProveedor(Proveedor pro) {
+        prr.save(pro);
+    }
+    
+    public void addNewPaciente(Paciente pa) {
+        par.save(pa);
+    }
     
     public DetalleOrdenCompra consultarOrden (int id) {
     
-        DetalleOrdenCompra p = docr.findOne(id);
+        DetalleOrdenCompra p = doc.findOne(id);
         return p;
     }
     
     public Iterable<DetalleOrdenCompra> consultarOrdenes(){
         
-        Iterable<DetalleOrdenCompra> p = docr.findAll();
+        Iterable<DetalleOrdenCompra> p = doc.findAll();
         return p;
     }
        
@@ -233,19 +269,6 @@ public class Clase {
         cr.save(c);
     }
     
-    public void addMedPP(DetalleInventario p){
-    
-        DetalleInventario t = new DetalleInventario();
-        t.setCantidad(p.getCantidad());
-        t.setIdDetalleInventario(1);
-        t.setMedicamentosPorProveedor(p.getMedicamentosPorProveedor());
-        dir.save(t);
-    
-    
-    }
-    
-    
-    
      public Iterable<Cotizacion> consultarCotizaciones() {
         Iterable<Cotizacion> ctz = cr.findAll();
         return ctz;
@@ -281,7 +304,7 @@ public class Clase {
     }
      
      public DetalleOrdenCompra consultarDetalleOrdenCompraPorId(int id) {
-        DetalleOrdenCompra  p = docr.findOne(id);
+        DetalleOrdenCompra p=docr.findOne(id);
         return p;
     }
       public void addNewOrdenCompra(OrdenCompra o) {
@@ -316,7 +339,23 @@ public class Clase {
         oc.setDetallesOrdenesCompras(dt);
         ocr.save(oc); 
     }
+
+    public DetallePedido consultarDetallePedido(int id) {
+        DetallePedido dp=dpr.findOne(id);
+        return dp;
+    }
+
+    public void addNewDetallePedido(DetallePedido dp) {
+        dpr.save(dp);
+    }
     
+    public Iterable<DetallePedido> consultarDetallesPedidos() {
+        Iterable<DetallePedido> dp = dpr.findAll();
+        return dp;
+    }
 
     
 }
+
+
+

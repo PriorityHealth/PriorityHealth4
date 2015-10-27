@@ -18,7 +18,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="ItemsDeFactura"
-    ,catalog="cosw2"
 )
 public class ItemDeFactura  implements java.io.Serializable {
 

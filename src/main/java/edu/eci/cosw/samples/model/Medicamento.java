@@ -21,7 +21,6 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name="Medicamentos"
-    ,catalog="cosw2"
 )
 public class Medicamento  implements java.io.Serializable {
 

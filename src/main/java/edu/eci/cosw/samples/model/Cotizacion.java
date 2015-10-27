@@ -15,7 +15,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="Cotizaciones"
-    ,catalog="cosw2"
+        
 )
 public class Cotizacion  implements java.io.Serializable {
 

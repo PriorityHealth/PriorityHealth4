@@ -16,7 +16,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="Mensajeros"
-    ,catalog="cosw2"
 )
 public class Mensajero  implements java.io.Serializable {
 
