@@ -49,9 +49,9 @@ public class Autorizacion  implements java.io.Serializable {
        this.estado = estado;
     }
    
+   
      @Id @GeneratedValue(strategy=IDENTITY)
 
-    
     @Column(name="numero", unique=true, nullable=false)
     public Integer getNumero() {
         return this.numero;

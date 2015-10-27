@@ -49,6 +49,15 @@ public class Pedido  implements java.io.Serializable {
        this.detallesPedidos = detallesPedidos;
        this.despachoses = despachoses;
     }
+    
+     public Pedido(Paciente pacientes, Date fechaLlegada, String direccion) {
+       this.pacientes = pacientes;
+       this.fechaLlegada = fechaLlegada;
+       this.direccion = direccion;
+      
+      
+    }
+   
    
      @Id @GeneratedValue(strategy=IDENTITY)
 

@@ -44,6 +44,8 @@ public class Despacho  implements java.io.Serializable {
        this.numeroPagoCoutaModeradora = numeroPagoCoutaModeradora;
        this.tiempoEspera = tiempoEspera;
     }
+    
+    
    
      @Id @GeneratedValue(strategy=IDENTITY)
 

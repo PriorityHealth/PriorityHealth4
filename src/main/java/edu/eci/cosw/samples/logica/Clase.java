@@ -316,7 +316,13 @@ public class Clase {
         oc.setDetallesOrdenesCompras(dt);
         ocr.save(oc); 
     }
-    
+      
+      public long tamañoArrayOrdenes()
+     {
+        return ocr.count();
+    }
+      
+       
 
     
 }

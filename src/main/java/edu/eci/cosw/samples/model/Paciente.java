@@ -46,6 +46,15 @@ public class Paciente  implements java.io.Serializable {
        this.direccion = direccion;
        this.pedidoses = pedidoses;
     }
+    
+    public Paciente(int idPacientes, Epsafilida epsafilidas, String nombre, Integer telefono, String direccion) {
+       this.idPacientes = idPacientes;
+       this.epsafilidas = epsafilidas;
+       this.nombre = nombre;
+       this.telefono = telefono;
+       this.direccion = direccion;
+      
+    }
    
      @Id 
 
