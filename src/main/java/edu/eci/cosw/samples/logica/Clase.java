@@ -235,11 +235,8 @@ public class Clase {
     
     public void addMedPP(DetalleInventario p){
     
-        DetalleInventario t = new DetalleInventario();
-        t.setCantidad(p.getCantidad());
-        t.setIdDetalleInventario(1);
-        t.setMedicamentosPorProveedor(p.getMedicamentosPorProveedor());
-        dir.save(t);
+      
+        dir.save(p);
     
     
     }

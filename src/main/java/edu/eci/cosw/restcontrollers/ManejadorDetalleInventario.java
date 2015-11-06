@@ -43,6 +43,7 @@ public class ManejadorDetalleInventario {
     
      @RequestMapping(method = RequestMethod.POST)        
     public ResponseEntity<?> addNewMedPP(@RequestBody DetalleInventario a) {       
+        System.out.print(a);
         c.addMedPP(a);
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
     }

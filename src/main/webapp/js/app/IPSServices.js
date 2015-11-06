@@ -252,13 +252,27 @@
             });            
         };
         
-        this.medicamentoAumento =function(medicamentosPorProveedor,cantidad){
-           
-             $http.post('rest/detalleInventario' , {"medicamentosPorProveedor":medicamentosPorProveedor,"cantidad":cantidad, "idInventario":1}).
+        this.getInventario =function(){
+              return $http({
+                method: 'GET',
+                url: 'rest/inventarios/'+1
+            }); 
+            
+        }
+        
+        this.medicamentoAumento =function(inv,doc){
+            
+            
+            alert(JSON.stringify(inv));
+            alert(JSON.stringify(doc));
+            
+             $http.post('rest/detalleInventario' , {"inventario":inv,"medicamentosPorProveedor":doc.medicamentosPorProveedor,"cantidad":doc.cantidad }).
                         success(function(){
                                       alert('DetalleInventario Realizada');
                 }).error(function(){
-                    alert('DetalleInventario Realizada');
+                    
+                        alert("falle");
+                    
                 });
             };
         

@@ -75,7 +75,7 @@ public class OrdenCompra  implements java.io.Serializable {
         this.fecha = fecha;
     }
 
-@OneToMany(fetch=FetchType.LAZY, mappedBy="ordenesCompra")
+@OneToMany(fetch=FetchType.EAGER, mappedBy="ordenesCompra")
     public Set<DetalleOrdenCompra> getDetallesOrdenesCompras() {
         return this.detallesOrdenesCompras;
     }
@@ -84,7 +84,7 @@ public class OrdenCompra  implements java.io.Serializable {
         this.detallesOrdenesCompras = detallesOrdenesCompras;
     }
 
-@OneToMany(fetch=FetchType.LAZY, mappedBy="ordenesCompra")
+@OneToMany(fetch=FetchType.EAGER, mappedBy="ordenesCompra")
     public Set<Devolucion> getDevolucioneses() {
         return this.devolucioneses;
     }

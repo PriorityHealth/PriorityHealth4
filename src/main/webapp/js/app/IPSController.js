@@ -169,7 +169,12 @@
     
         $scope.medicamentomas=function(){
         
-        IPSRestAPI.medicamentoAumento($scope.medi,$scope.tomado);
+        $scope.tomado=IPSRestAPI.getInventario().success(function(data){
+            $scope.tomado=data;
+            IPSRestAPI.medicamentoAumento($scope.tomado,$scope.pedido);
+        });
+        
+        
     };
     
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////
