@@ -24,6 +24,12 @@ public interface DetallesInventarioRepository extends CrudRepository<DetalleInve
 @Query("from DetalleInventario di where di.cantidad= :cantidad  ")
     public List<DetalleInventario> detallesInventarioPorCantidad(@Param("cantidad") int cantidad);
 
+@Query("from DetalleInventario di where di.medicamentosPorProveedor.idMedicamentosProvedor= :medprov  ")
+    public List<DetalleInventario> detallesInventarioProv(@Param("medprov") int medprov);
+    
+
+    
+    
 }
 
 

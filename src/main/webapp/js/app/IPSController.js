@@ -13,6 +13,7 @@
         $scope.proveedor1;
         $scope.idmedicpp;
         $scope.tomado;
+        $scope.idpro;
      
        
 
@@ -160,6 +161,24 @@
             $scope.pedido= IPSRestAPI.getDetalleOrdenCompra($scope.idordenCompra).success(function(data){
                 $scope.pedido= data;
             });
+            
+        };
+        
+        $scope.traerDetalleInventarioProv=function(){
+            
+            $scope.cuento = IPSRestAPI.getInvProv($scope.idpro).success(function(data){
+                variable=0;
+                for (i=0;i<data.length;i++){
+                    variable += data[i].cantidad;
+                    
+                }
+                
+                alert("El numero de medicamentos Disponibles son : " + variable);
+                
+            });
+            
+            
+            
             
         };
         

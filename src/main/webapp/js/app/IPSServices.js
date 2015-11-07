@@ -171,6 +171,15 @@
             });
         };
         
+        this.getInvProv=function(id){
+            
+            return $http({
+                
+              method : 'GET',
+              url: 'rest/detalleInventario/'+id
+            });
+        };
+        
         
         //////////////////////////////////////////////////////////////////////////
         this.mensajerosRequestPromise = function () {            

@@ -35,9 +35,16 @@ public class ManejadorDetalleInventario {
         m=(List<DetalleInventario>) c.consultarDetalleInventario();
         return m;
     }
+    /*
     @RequestMapping(value="/{cantidad}", method = RequestMethod.GET)
     public Iterable<DetalleInventario> traerDetalleInventario(@PathVariable int cantidad) {  
         Iterable<DetalleInventario> cat = c.cargarDetalleInventarioPorCantidad(cantidad);
+        return cat;
+    } 
+    */
+    @RequestMapping(value="/{medicamentosPorProveedor}", method = RequestMethod.GET)
+    public Iterable<DetalleInventario> traerDetalleInventarioidprov(@PathVariable("medicamentosPorProveedor") int medprod) {  
+        Iterable<DetalleInventario> cat = c.cargarDetalleInventarioProv(medprod);
         return cat;
     } 
     

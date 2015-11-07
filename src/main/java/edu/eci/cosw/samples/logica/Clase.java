@@ -228,6 +228,11 @@ public class Clase {
      Iterable<DetalleInventario> di = dir.detallesInventarioPorCantidad(cantidad);
         return di;
      }
+     
+     public Iterable<DetalleInventario> cargarDetalleInventarioProv(int prov){
+         Iterable<DetalleInventario> pro = dir.detallesInventarioProv(prov);
+         return pro;
+     }
     
     public void addNewCotizacion(Cotizacion c) {
         cr.save(c);

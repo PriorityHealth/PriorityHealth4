@@ -227,7 +227,35 @@
             </table>
                         
                     <button center-align class="btn btn-primary filter active" value="OK" ng-click="medicamentomas()">Generar Ingreso inventario</button>
-                       </div>  
+                       </div> 
+        
+        
+        
+                  <div class="row">
+                <div class="col-lg-12 text-center animateup">
+					<div class="inline-icons-text section-heading">
+						<div class="inline-icon">
+							<hr/><hr/><hr/><hr/><hr/>
+						</div>
+						<span class="inline-icon heading-width">
+							<span class="heading-text">Cantidad Medicamento</span>
+						</span>
+						<div class="inline-icon">
+							<hr/><hr/><hr/><hr/><hr/>
+						</div>
+					</div>
+                </div>
+            </div>
+                        <div class="form-group input-group">
+                        <span class="input-group-addon"> <i class="fa fa-user fa-lg"></i> </span>
+                        <label for="name">Medicamento Por Proveedor </label>
+			<input style="background-color:darkgray" class="form-control" type="text" ng-model="idpro" id="idpro" placeholder="Numero de Seguimiento ">
+                    </div>
+                     <br>
+                    <div class="form-group col-xs-12">
+                       <!--button type="submit" class="btn btn-primary" ng-click="getAutorizacion()">Consultar Todas</button-->
+                       <button type="submit" class="btn btn-primary" ng-click="traerDetalleInventarioProv()">Consultar</button>
+                    </div>
 
                      
                      
