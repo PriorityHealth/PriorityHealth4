@@ -6,6 +6,7 @@
 package edu.eci.cosw.restcontrollers;
 
 import edu.eci.cosw.samples.logica.Clase;
+import edu.eci.cosw.samples.model.DetallePedido;
 import edu.eci.cosw.samples.model.Pedido;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,8 +31,13 @@ public class ManejadorPedidos {
     Clase c;
 
     @RequestMapping(value="/{id}",method = RequestMethod.GET)
-     public Pedido consped(@PathVariable int id) throws OperationFailedException{
-        Pedido p=c.consultarPedido(id);
+     public List<Pedido> consped(@PathVariable int id) throws OperationFailedException{
+        
+         List <Pedido> p= new ArrayList<Pedido>();
+         p=(List<Pedido>)c.consultarPedido(id);
+        
+        
+        
         
         if(p==null){
             throw new OperationFailedException();
@@ -50,5 +56,15 @@ public class ManejadorPedidos {
     public ResponseEntity<?> addPedido(@RequestBody Pedido p) {       
         c.addNewPedido(p);
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
+    }
+    
+    @RequestMapping(value="/detalle/{id}",method = RequestMethod.GET)
+       
+    public List<DetallePedido> DetallePedidos(@PathVariable int id) {  
+        
+        List<DetallePedido> p=new ArrayList<DetallePedido>();
+        p= c.ConsultarDetallePedido(id);
+        
+        return p;
     }
 }

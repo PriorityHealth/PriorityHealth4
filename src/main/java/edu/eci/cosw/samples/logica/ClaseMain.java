@@ -26,8 +26,8 @@ public class ClaseMain {
         
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");  
         Clase c = applicationContext.getBean(Clase.class);
-        Pedido p = c.consultarPedido(93);
-        System.out.println("el pedodp que trae viene connnnnn "+p.getIdPedidos());
+        
+        
     }   
     
 }

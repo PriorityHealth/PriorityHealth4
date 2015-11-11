@@ -10,6 +10,7 @@ import edu.eci.cosw.samples.model.Cotizacion;
 import edu.eci.cosw.samples.model.Despacho;
 import edu.eci.cosw.samples.model.DetalleInventario;
 import edu.eci.cosw.samples.model.DetalleOrdenCompra;
+import edu.eci.cosw.samples.model.DetallePedido;
 import edu.eci.cosw.samples.model.Epsafilida;
 import edu.eci.cosw.samples.model.Inventario;
 import edu.eci.cosw.samples.model.Medicamento;
@@ -22,6 +23,7 @@ import edu.eci.cosw.samples.model.Proveedor;
 import edu.eci.cosw.samples.persistencia.AutorizacionRepository;
 import edu.eci.cosw.samples.persistencia.CotizacionesRepository;
 import edu.eci.cosw.samples.persistencia.DespachoRepository;
+import edu.eci.cosw.samples.persistencia.DetallePedidoRepository;
 import edu.eci.cosw.samples.persistencia.DetallesInventarioRepository;
 import edu.eci.cosw.samples.persistencia.DetallesOrdenesCompraRepository;
 import edu.eci.cosw.samples.persistencia.EpsafilidaRepository;
@@ -60,6 +62,9 @@ public class Clase {
     
     @Autowired
     PacientesRepository par;
+    
+     @Autowired
+    DetallePedidoRepository dpr;
     
     @Autowired
     EpsafilidaRepository epsr;
@@ -103,14 +108,21 @@ public class Clase {
         return p;
     }
        
-    public Pedido consultarPedido(int id) {
-        Pedido p= pr.findOne(id);
+    public Iterable<Pedido> consultarPedido(int id) {
+        Iterable<Pedido> p= pr.search(id);
         return p;
     }
 
     public Iterable<Pedido> consultarPedidos() {
         Iterable<Pedido> p = pr.findAll();
         return p;
+    }
+    
+    public List<DetallePedido> ConsultarDetallePedido(int id){
+    
+        List<DetallePedido> p = dpr.search(id);
+        return p;
+    
     }
 
     public MedicamentoPorProveedor consultarMedicamentoPP(int id) {
