@@ -14,7 +14,8 @@
         $scope.idmedicpp;
         $scope.tomado;
         $scope.idpro;
-     
+        $scope.traePedido;
+        
        
 
   
@@ -156,6 +157,8 @@
         } );
         };
      
+     
+     
         $scope.traerDetalleInventario=function(){
             
             $scope.pedido= IPSRestAPI.getDetalleOrdenCompra($scope.idordenCompra).success(function(data){
@@ -220,6 +223,16 @@
                 );
             };
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+            $scope.traePedido1;
+            $scope.getPedido = function (){
+            $scope.traePedido = IPSRestAPI.pedidoByIdRequestPromise($scope.traePedido1).success(function(data){
+            $scope.traePedido = data;
+            alert("Entre" + $scope.traePedido1 );
+        } );
+        };
+    
+    
     
     /*============================================================================OrdenDeCompra=========================================================
 =================================================================================================================================================*/

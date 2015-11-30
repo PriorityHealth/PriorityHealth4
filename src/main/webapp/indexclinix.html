@@ -119,6 +119,47 @@
                                         
                                     </div>
                                 
+                                
+                                                        
+                    <div class="form-group input-group">
+                        <span class="input-group-addon"> <i class="fa fa-user fa-lg"></i> </span>
+                        <label for="name">Numero Pedido </label>
+			<input style="background-color:darkgray" type="text" ng-model="traePedido1">
+                    </div>
+                     <br>
+                    <div class="form-group col-xs-12">
+                       <!--button type="submit" class="btn btn-primary" ng-click="getAutorizacion()">Consultar Todas</button-->
+                       <button type="submit" class="btn btn-primary" ng-click="getPedido()">Consultar</button>
+                    </div>
+            
+            <table style="background-color:darkgray" class="table table-condensed table-bordered table-striped">
+                <thead>
+                    <tr>
+                       <th>Codigo Pedido</th>
+                       <th>llegada</th>
+                       
+                    </tr>                
+                </thead>
+                <tbody>
+                    <tr >
+                        <td  style="background-color:darkgray">
+                            {{traePedido1.idPedidos}}
+                        </td>
+                        
+                        <td style="background-color:teal">
+                            {{traePedido1.fechaLlegada}}
+                        </td >
+                        
+                    </tr>                 
+                </tbody>
+            </table>
+                                
+                                
+                                
+                                
+                                
+                                
+                                
 
                                 <div class="text-center">
                                     <div class="page-scroll menu-icon">

@@ -17,6 +17,10 @@ import org.springframework.data.repository.query.Param;
  * @author Usuario
  */
 public interface PedidosRepository extends CrudRepository<Pedido, Integer>{
+    
     @Query("from Pedido p where p.pacientes.idPacientes= :ln")
     public Iterable<Pedido> search(@Param("ln") int searchTerm);
+    
+    @Query("from Pedido p where p.idPedidos = :id")
+    public Pedido search2(@Param("id") int searchTerm1);
 }

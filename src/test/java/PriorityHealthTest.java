@@ -185,14 +185,7 @@ public class PriorityHealthTest{
         assertEquals(tamInicial+1,tamFinal);
     }
   
-    @Test
-    public void PruebaConsultarAutorizacionTest() {
-        
-       Autorizacion a=claseLogica.consultarAutorizacion(26);
-       assertEquals( a.getEstado(),"pendiente");
-       assertEquals( a.getEpsafilidas().getNombre(),"Marcela Olmeda Trejo");
-      
-    }
+ 
     
      @Test
     public void PruebaConsultarDespachoTest() {

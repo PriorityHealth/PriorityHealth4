@@ -102,6 +102,12 @@ public class Clase {
         return p;
     }
     
+    public Pedido consultarPedidoId (int id) {
+    
+        Pedido p = pr.search2(id);
+        return p;
+    }
+    
     public Iterable<DetalleOrdenCompra> consultarOrdenes(){
         
         Iterable<DetalleOrdenCompra> p = docr.findAll();

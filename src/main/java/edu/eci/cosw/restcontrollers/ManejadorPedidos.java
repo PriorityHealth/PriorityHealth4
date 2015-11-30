@@ -31,10 +31,9 @@ public class ManejadorPedidos {
     Clase c;
 
     @RequestMapping(value="/{id}",method = RequestMethod.GET)
-     public List<Pedido> consped(@PathVariable int id) throws OperationFailedException{
+     public Pedido consped(@PathVariable int id) throws OperationFailedException{
         
-         List <Pedido> p= new ArrayList<Pedido>();
-         p=(List<Pedido>)c.consultarPedido(id);
+         Pedido p= c.consultarPedidoId(id);
         
         
         
