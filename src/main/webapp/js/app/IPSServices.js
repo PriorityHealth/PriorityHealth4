@@ -13,6 +13,8 @@
         }; 
         
         
+        
+        
        this.pacientesRequestPromise = function () {            
             return $http({
                 method: 'GET',
@@ -284,6 +286,21 @@
                     
                 });
             };
+            
+         this.agregarDespacho=function(empleado,pedido){
+             
+             alert(JSON.stringify(empleado));
+             alert(JSON.stringify(pedido));
+              $http.post('rest/despachos' , {"mensajeros":empleado,"pedidos":pedido,"estado":"pendiente","numeroPagoCoutaModeradora":23,"tiempoEspera":5 }).
+                         success(function(){
+                                      alert('Despacho Asignado');
+                }).error(function(){
+                    
+                        alert("falle");
+                    
+                });
+               
+         };
         
         
         

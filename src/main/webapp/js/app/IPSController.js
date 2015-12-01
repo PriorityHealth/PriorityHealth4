@@ -228,8 +228,22 @@
             $scope.getPedido = function (){
             $scope.traePedido = IPSRestAPI.pedidoByIdRequestPromise($scope.traePedido1).success(function(data){
             $scope.traePedido = data;
-            alert("Entre" + $scope.traePedido1 );
+            if ($scope.traePedido == null){
+                
+                alert("Pedido No Existente Ingreselo De Nuevo");
+            }
+            else{
+                
+                alert("Consulta realizada : " + "ID : " + $scope.traePedido.idPedidos +" "+ "Fecha Llegada : " + $scope.traePedido.fechaLlegada);
+                IPSRestAPI.agregarDespacho($scope.empleado,$scope.traePedido);
+                }
+            
+          
         } );
+        };
+        
+        $scope.asigna=function(){
+            IPSRestAPI.agregarDespacho($scope.empleado,$scope.traePedido);
         };
     
     

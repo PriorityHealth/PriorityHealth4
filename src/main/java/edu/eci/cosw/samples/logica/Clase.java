@@ -264,6 +264,14 @@ public class Clase {
     
     }
     
+      public void adddespacho(Despacho p){
+    
+      
+        des.save(p);
+    
+    
+    }
+    
     
     
      public Iterable<Cotizacion> consultarCotizaciones() {

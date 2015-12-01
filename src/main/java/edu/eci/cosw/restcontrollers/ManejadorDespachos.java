@@ -12,6 +12,8 @@ import edu.eci.cosw.samples.model.Despacho;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -44,7 +46,14 @@ public class ManejadorDespachos {
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
     public List<Despacho> DespachoPorPaciente(@PathVariable int id)throws OperationFailedException{
         return c.ConsultarDespachoPaciente(id);
+        
     }
     
+         @RequestMapping(method = RequestMethod.POST)        
+    public ResponseEntity<?> addNewMedPP(@RequestBody Despacho a) {       
+        System.out.print(a);
+        c.adddespacho(a);
+        return new ResponseEntity<>(HttpStatus.ACCEPTED);
+    }
     
 }
