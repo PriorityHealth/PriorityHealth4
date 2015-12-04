@@ -248,6 +248,12 @@
                 url: 'rest/proveedores'
             });            
         };
+          this.pedidoByPaciente = function (id) {            
+            return $http({
+                method: 'GET',
+                url: 'rest/pedidos/paciente/'+id
+            });            
+        };
         
         this.pacienteByIdRequestPromise = function (idped) {            
             return $http({

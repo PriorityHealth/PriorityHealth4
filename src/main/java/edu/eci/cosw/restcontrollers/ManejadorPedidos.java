@@ -44,6 +44,22 @@ public class ManejadorPedidos {
         return p;
      }
      
+         @RequestMapping(value="/paciente/{id}",method = RequestMethod.GET)
+     public List<Pedido> cc(@PathVariable int id) throws OperationFailedException{
+        
+         List<Pedido> p= new ArrayList<Pedido>();
+         System.out.print(c.consultarPedido(id));
+         p=(List<Pedido>)c.consultarPedido(id);
+        
+         
+        
+        
+        if(p==null){
+            throw new OperationFailedException();
+        }
+        return p;
+     }
+     
      @RequestMapping(method = RequestMethod.GET)        
     public List<Pedido> allPedidos() {        
         List<Pedido> p=new ArrayList<Pedido>();
