@@ -19,7 +19,7 @@ public interface DespachoRepository extends CrudRepository<Despacho, Integer>{
      @Query("from Despacho a")
     public List<Despacho> getDespachos();
     
-    //Prueba de Subida
+    //   Prueba de Subida
     
     @Query("from Despacho a where a.pedidos.pacientes.idPacientes= :ln")
     public List<Despacho> DespachoPorPaciente (@Param("ln")Integer id );
