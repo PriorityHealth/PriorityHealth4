@@ -58,7 +58,7 @@ public class ManejadorDespachos {
     }
     
     @RequestMapping(value="/despacho",method = RequestMethod.POST)        
-    public ResponseEntity<?> Update (@RequestBody Despacho a) {       
+    public ResponseEntity<?> Update (@RequestBody int a) {       
         System.out.print(a);
         c.updateDespacho(a);
         return new ResponseEntity<>(HttpStatus.ACCEPTED);

@@ -353,9 +353,10 @@ public class Clase {
         return ocr.count();
     }
 
-    public void updateDespacho(Despacho a) {
-        a.setEstado("Entregado");
-        des.save(a);
+    public void updateDespacho(int a) {
+        Despacho p = des.findOne(a);
+        p.setEstado("Entregado");
+        des.save(p);
     }
 
       
