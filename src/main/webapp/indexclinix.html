@@ -119,6 +119,59 @@
                                         
                                     </div>
                                 
+                    
+                                
+                 
+                                
+                                
+                                
+                <div class="gap-30"></div>
+            
+                 
+                    <div class="form-group col-xs-12">
+                       <!--button type="submit" class="btn btn-primary" ng-click="getAutorizacion()">Consultar Todas</button-->
+                       <button type="submit" class="btn btn-primary" ng-click="traerPedidos()">Consultar Pedidos</button>
+                    </div>
+            
+                <table style="background-color:darkgray" class="table table-condensed table-bordered table-striped" >
+                <thead>
+                    <tr>
+                       <th>Codigo Pedido</th>
+                       <th>Fecha Llegada</th>
+                       <th>Direccion</th>
+                       
+                    </tr>                
+                </thead>
+                <tbody ng-repeat="todosped1 in todosped"  >
+                    <tr >
+                        <td  style="background-color:darkgray">
+                            {{todosped1.idPedidos}}
+                        </td>
+                        
+                        <td style="background-color:teal" >
+                            {{todosped1.fechaLlegada}}
+                        </td >
+                           <td style="background-color:teal" >
+                            {{todosped1.direccion}}
+                        </td >                      
+                    </tr>                 
+                </tbody>
+            </table>                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
                                 
                                                         
                     <div class="form-group input-group">
@@ -232,6 +285,8 @@
                     <tr>
                        <th>Codigo detalle</th>
                        <th>Cantidad</th>
+                       <th>Id Medicamento Prov</th>
+                     
                        
                     </tr>                
                 </thead>
@@ -244,7 +299,11 @@
                         <td style="background-color:teal">
                             {{pedido.cantidad}}
                         </td >
+                         <td style="background-color:teal">
+                            {{pedido.medicamentosPorProveedor.idMedicamentosProvedor}}
+                        </td >
                         
+               
                     </tr>                 
                 </tbody>
             </table>

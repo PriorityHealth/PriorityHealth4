@@ -15,6 +15,7 @@
         $scope.tomado;
         $scope.idpro;
         $scope.traePedido;
+        $scope.todosped;
         
        
 
@@ -167,6 +168,14 @@
             
         };
         
+        $scope.traerPedidos=function(){
+            
+            $scope.todosped= IPSRestAPI.pedidosRequestPromise().success(function(data){
+                
+                $scope.todosped=data;
+            });
+        }
+        
         $scope.traerDetalleInventarioProv=function(){
             
             $scope.cuento = IPSRestAPI.getInvProv($scope.idpro).success(function(data){
@@ -207,12 +216,38 @@
                 IPSRestAPI.mensajerosByIdRequestPromise($scope.empleado).then(
                     //promise success
                     function (response) {
-                         
+                        
+                        
+                        $scope.cuento2 = IPSRestAPI.getDespacho().success(function(data2){
+                        variable=0;
+                        for (i=0;i<data2.length;i++){
+                            if (data2[i].mensajeros.idEmpleados == response.data.idEmpleados){
+                            variable += 1;}
+                    
+                        }
+                        
+                        if (variable >= 10){
+                             alert("El numero Despachos Asignados es :  " + variable + " Favor Autentique otro empleado");
+                             $scope.autenticar=-1;
+                            }
+                        else{
+                
+                        alert("El numero Despachos Asignados es :  " + variable);
                         $scope.empleado=response.data;
                         alert('Empleado '+response.data.nombre);
                         console.log('Empleado con '+response.data.nombre);
                         $scope.selectedEmpleadoId = response.data;
                         $scope.autenticar=1;
+                            }
+                         
+                        
+                        
+                        
+                
+            });
+                        
+                        
+              
                     },
                     //promise error
                     function (response) {
@@ -222,6 +257,8 @@
                     }
                 );
             };
+        
+                  
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
     
             $scope.traePedido1;

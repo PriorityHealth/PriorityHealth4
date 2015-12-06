@@ -32,6 +32,7 @@ public class ManejadorDespachos {
     Clase c;
   
     @RequestMapping(method = RequestMethod.GET)        
+    
     public List<Despacho> allDespachos() {        
         List<Despacho> au = new ArrayList<Despacho>();
         au=(List<Despacho>) c.consultarDespachos();

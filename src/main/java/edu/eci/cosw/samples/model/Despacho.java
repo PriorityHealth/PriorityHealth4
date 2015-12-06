@@ -59,7 +59,7 @@ public class Despacho  implements java.io.Serializable {
         this.idDespacho = idDespacho;
     }
 
-@ManyToOne(fetch=FetchType.LAZY)
+@ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn(name="Mensajeros_idEmpleados", nullable=false)
     public Mensajero getMensajeros() {
         return this.mensajeros;

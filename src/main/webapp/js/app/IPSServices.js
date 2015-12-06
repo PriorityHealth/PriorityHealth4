@@ -163,6 +163,14 @@
         this.getConsultarDespacho= function(){
             return $http.get('http://localhost:8080/intento1/rest/despachos/');
         };
+        
+        this.getDespacho = function(){
+            return $http({
+                
+              method : 'GET',
+              url: 'rest/despachos/'
+            });
+        }
     
         this.getDespachoByPaciente = function(id){
             
