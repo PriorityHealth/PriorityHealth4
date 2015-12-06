@@ -185,7 +185,7 @@ public class PriorityHealthTest{
         assertEquals(tamInicial+1,tamFinal);
     }
   
- 
+ /*
     
      @Test
     public void PruebaConsultarDespachoTest() {
@@ -199,7 +199,7 @@ public class PriorityHealthTest{
        assertEquals( d1.getNumeroPagoCoutaModeradora(),numero);
        assertEquals( d1.getTiempoEspera(),numeroEspera);
     }
-
+*/
 }
 
 

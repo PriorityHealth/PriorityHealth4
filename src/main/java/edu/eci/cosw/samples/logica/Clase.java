@@ -265,9 +265,12 @@ public class Clase {
     }
     
       public void adddespacho(Despacho p){
-    
+        
       
+        
+        
         des.save(p);
+        
     
     
     }
@@ -349,6 +352,12 @@ public class Clase {
      {
         return ocr.count();
     }
+
+    public void updateDespacho(Despacho a) {
+        a.setEstado("Entregado");
+        des.save(a);
+    }
+
       
        
 
